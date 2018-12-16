@@ -1,0 +1,95 @@
+<!-- Navbar Start-->
+    <header class="nav-holder make-sticky">
+      <div id="navbar" role="navigation" class="navbar navbar-expand-lg">
+
+        <h2>
+          <i class="fa fa-laptop" style="font-size:36px; padding-right: 15px;padding-left: 50px;"></i>Electroder</h1>
+
+          <button type="button" data-toggle="collapse" data-target="#navigation" class="navbar-toggler btn-template-outlined"><span
+              class="sr-only">Toggle navigation</span><i class="fa fa-align-justify"></i></button>
+
+          <div id="navigation" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav ml-auto">
+
+              <li class="nav-item dropdown active">
+                <a onclick="" data-toggle="dropdown" class="dropdown-toggle">Home
+                  <b class="caret"></b></a>
+
+                <b class="caret"></b>
+              </li>
+              <li class="nav-item dropdown menu-large">
+                <a onclick="window.location.href = '../user/laptops'" data-toggle="dropdown" class="dropdown-toggle">Laptops
+                  <b class="caret"></b></a>
+
+
+                <b class="caret"></b>  
+                </button>
+              </li>
+
+
+              <li class="nav-item dropdown menu-large">
+                <a onclick="window.location.href = '../user/contact'" data-toggle="dropdown" class="dropdown-toggle">Contact
+                  <b class="caret"></b></a>
+
+
+                <b class="caret"></b>
+                </button>
+              </li>
+
+
+            </ul>
+          </div>
+
+          <div id="search" class="collapse clearfix">
+            <form role="search" class="navbar-form">
+              <div class="input-group">
+                <input type="text" placeholder="Search" class="form-control"><span class="input-group-btn">
+                
+              </div>
+            </form>
+          </div>
+      </div>
+  </div>
+  </header>
+  <!-- Navbar End-->
+
+<!-- Heading Start-->
+<div id="heading-breadcrumbs" class="brder-top-0 border-bottom-0">
+  <div class="container">
+    <div class="row d-flex align-items-center flex-wrap">
+      <div class="col-md-7">
+        <h1 class="h2">Laptops</h1>
+      </div>
+
+    </div>
+  </div>
+</div>
+<!--Heading End-->
+
+<article>
+    <button type="button" onclick="window.location.href= '/admin/addlaptop'"> Add Product </button>
+    {{!-- <a href="/admin/addlaptop">Add</a> --}}
+    <p>Product List:</p>
+    <ol>
+        {{#each prodList}}
+        <li>ID: {{this._id}}</li>
+        <ul>
+            <li>Image1: {{this.prod_image1}}</li>
+            <li>Image2: {{this.prod_image2}}</li>
+            <li>Image3: {{this.prod_image3}}</li>
+            <li>Name: {{this.prod_name}}</li>
+            <li>Brand:{{this.prod_brand}}</li>
+            <li>Price:{{this.prod_price}}</li>
+            <li>Screen Size:{{this.prod_screensize}}</li>
+            <li>RAM:{{this.prod_ram}}</li>
+            <li>Processor:{{this.prod_processor}}</li>
+            <li>HDD: {{this.prod_hard_disk_size}}</li>
+            <li>Rating: {{this.prod_rating}}</li>
+            <li>Sold: {{this.sold}}</li>
+            <button type="submit" onclick="window.location.href = '/admin/updatelaptop/{{this._id}}'"> Update Product
+            </button>
+            <button type="submit" onclick="window.location.href = '/admin/deletelaptop/{{this._id}}'"> Delete Product</button>
+        </ul>
+        {{/each}}
+    </ol>
+</article>

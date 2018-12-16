@@ -1,0 +1,104 @@
+<!-- Navbar Start-->
+<header class="nav-holder make-sticky">
+  <div id="navbar" role="navigation" class="navbar navbar-expand-lg">
+    <h2>
+      <i class="fa fa-laptop" style="font-size:36px; padding-right: 15px;padding-left: 50px;"></i>Electroder</h1>
+      {{!-- <button type="button" data-toggle="collapse" data-target="#navigation" class="navbar-toggler btn-template-outlined"><span
+          class="sr-only">Toggle navigation</span><i class="fa fa-align-justify"></i></button> --}}
+      <div id="navigation" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav ml-auto">
+          <li class="nav-item dropdown active">
+            <a href='#' onclick="window.location.href = '../../../user/home'" data-toggle="dropdown" class="">Home
+              <b class="caret"></b></a>
+            <b class="caret"></b>
+          </li>
+          <li class="nav-item dropdown menu-large">
+            <a href='#' onclick="window.location.href = '../../../user/laptops'" data-toggle="dropdown" class="">Laptops
+              <b class="caret"></b></a>
+            <b class="caret"></b>
+            </button>
+          </li>
+          <li class="nav-item dropdown menu-large">
+            <a href='#' onclick="window.location.href = '../../../user/contact'" data-toggle="dropdown" class="">Contact
+              <b class="caret"></b></a>
+            <b class="caret"></b>
+            </button>
+          </li>
+        </ul>
+      </div>
+      <div id="search" class="collapse clearfix">
+        <form role="search" class="navbar-form">
+          <div class="input-group">
+            <input type="text" placeholder="Search" class="form-control"><span class="input-group-btn">
+          </div>
+        </form>
+      </div>
+  </div>
+  </div>
+</header>
+<!-- Navbar End-->
+<!--LaptopDetail Start-->
+<div id="heading-breadcrumbs">
+  <div class="container">
+    <div class="row d-flex align-items-center flex-wrap">
+      <div class="col-md-7">
+        <h1 class="h2">Laptop Detail</h1>
+      </div>
+
+    </div>
+  </div>
+</div>
+<div ></div>
+<div id="content">
+  <div class="container">
+    <div id="productMain" class="row">
+      <div class="col-sm-6">
+        <div class="box">
+        <div data-slider-id="1" class="owl-carousel shop-detail-carousel">
+          <div> <img src="{{prod.prod_image1}}" alt="" class="img-fluid"></div>
+          <div> <img src="{{prod.prod_image2}}" alt="" class="img-fluid"></div>
+          <div> <img src="{{prod.prod_image3}}" alt="" class="img-fluid"></div>
+        </div>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="box">
+          <form>
+              <p class="price">{{prod.prod_name}}</p>
+            <p class="price">{{prod.prod_price}}</p>
+            <p class="text-center">
+              <button type="submit" class="btn btn-template-outlined">
+                <i class="fa fa-shopping-cart"></i>
+                Add to cart</button>
+              {{!-- <button type="submit" data-toggle="tooltip" data-placement="top" title="Add to wishlist" class="btn btn-default"><i
+                  class="fa fa-heart-o"></i></button> --}}
+            </p>
+          </form>
+        </div>
+        <div data-slider-id="1" class="owl-thumbs">
+          <button class="owl-thumb-item"><img src="{{prod.prod_image1}}" alt="" class="img-fluid"></button>
+          <button class="owl-thumb-item"><img src="{{prod.prod_image2}}" alt="" class="img-fluid"></button>
+          <button class="owl-thumb-item"><img src="{{prod.prod_image3}}" alt="" class="img-fluid"></button>
+        </div>
+      </div>
+    </div>
+    <div id="details" class="box mb-4 mt-4">
+      <p></p>
+      <h3>{{prod.prod_name}}</h3>
+      <h4>Description</h4>
+      <p>{{this.prod_de}}</p>
+      <ul>
+        <li>Brand:{{prod.prod_brand}} </li>
+        <li>Price: {{prod.prod_price}}</li>
+        <li>Screen Size: {{prod_screensize}}</li>
+        <li>RAM:{{prod.prod_ram}} </li>
+        <li>Processor: {{prod.prod_processor}}</li>
+        <li>Hard Disk Size: {{prod.prod_hard_disk_size}}</li>
+        <li>Rating: {{prod.prod_rating}}</li>
+      </ul>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+<!--LaptopDetail End-->

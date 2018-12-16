@@ -1,0 +1,194 @@
+ <!-- Top bar-->
+    <div class="top-bar">
+      <div class="">
+        <div class="row d-flex align-items-center">
+          <div class="col-md-6 d-md-block d-none">
+         
+          </div>
+          <div class="col-md-6">
+            <div class="d-flex justify-content-md-end justify-content-between">
+              <ul class="list-inline contact-info d-block d-md-none">
+                <li class="list-inline-item"><a href="#"><i class="fa fa-phone"></i></a></li>
+                <li class="list-inline-item"><a href="#"><i class="fa fa-envelope"></i></a></li>
+              </ul>
+{{#if customer}}
+
+
+                <a href='#'onclick="window.location.href = '../customer/logout'" class="signup-btn">
+                <i class="fa fa-sign-out"></i><span class="d-none d-md-inline-block">Log
+                    Out</span></a></div>
+{{else}}
+<div class="login"><a href="#" data-toggle="modal" data-target="#login-modal" class="login-btn">
+                <i class="fa fa-sign-in"></i><span
+                    class="d-none d-md-inline-block">Sign In</span></a>
+
+                <a href='#'onclick="window.location.href = '../user/signup'" class="signup-btn">
+                <i class="fa fa-user"></i><span class="d-none d-md-inline-block">Sign
+                    Up</span></a></div>
+{{/if}}
+              
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Top bar end-->
+    <!-- Login Modal-->
+    <div id="login-modal" tabindex="-1" role="dialog" aria-labelledby="login-modalLabel" aria-hidden="true" class="modal fade">
+      <div role="document" class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 id="login-modalLabel" class="modal-title">Customer Login</h4>
+            <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">×</span></button>
+          </div>
+          <div class="modal-body">
+            <form method="POST" action="/user/login">
+           
+              <div class="form-group">
+                <input name="username" type="text" id="username"  type="text" placeholder="username" class="form-control" required>
+              </div>
+              <div class="form-group">
+                <input id="password_modal" name="password" id="password" type="password" placeholder="password" class="form-control">
+              </div>
+              <p class="text-center">
+                <button class="btn btn-template-outlined" id="loginForm" type="submit"><i class="fa fa-sign-in"></i> Log in</button>
+              </p>
+            </form>
+            <p class="text-center text-muted">Not registered yet?</p>
+            <p class="text-center text-muted"><a onclick="window.location.href = '../user/signup'" href=''>
+            <strong>Register now</strong></a>! It is
+              easy and done in 1 minute and gives you access to special discounts and much more!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Login modal end-->
+    
+
+
+<!-- Navbar Start-->
+<header class="nav-holder make-sticky">
+  <div id="navbar" role="navigation" class="navbar navbar-expand-lg">
+
+    <h2>
+      <i class="fa fa-laptop" style="font-size:36px; padding-right: 15px;padding-left: 50px;"></i>Electroder</h1>
+
+      <button type="button" data-toggle="collapse" data-target="#navigation" class="navbar-toggler btn-template-outlined"><span
+          class="sr-only">Toggle navigation</span><i class="fa fa-align-justify"></i></button>
+
+      <div id="navigation" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav ml-auto">
+
+          <li class="nav-item dropdown active">
+            <a href='#' onclick="" data-toggle="dropdown" class="">Home
+              <b class="caret"></b></a>
+
+            <b class="caret"></b>
+          </li>
+          <li class="nav-item dropdown menu-large">
+            <a href='#' onclick="window.location.href = '../user/laptops'" data-toggle="dropdown" class="">Laptops
+              <b class="caret"></b></a>
+
+
+            <b class="caret"></b>
+            </button>
+          </li>
+
+
+          <li class="nav-item dropdown menu-large">
+            <a href='#' onclick="window.location.href = '../user/contact'" data-toggle="dropdown" class="">Contact
+              <b class="caret"></b></a>
+            <b class="caret"></b>
+            </button>
+          </li>
+{{#if customer}}
+<li class="nav-item dropdown menu-large">
+            <a href='#' onclick="window.location.href = '../user/contact'" data-toggle="dropdown" class="">Profile
+              <b class="caret"></b></a>
+            <b class="caret"></b>
+            </button>
+          </li>
+{{/if}}
+
+        </ul>
+      </div>
+
+      <div id="search" class="collapse clearfix">
+        <form role="search" class="navbar-form">
+          <div class="input-group">
+            <input type="text" placeholder="Search" class="form-control"><span class="input-group-btn">
+
+          </div>
+        </form>
+      </div>
+  </div>
+  </div>
+</header>
+<!-- Navbar End-->
+
+<!-- Carousel Start-->
+
+<div class="home-carousel">
+  <div class="dark-mask mask-primary"></div>
+  <div class="container"> 
+     <div class="homepage owl-carousel"> 
+      <div class="item">
+        <div class="row">
+          <div class="col-md-5 text-right">
+            <p><img src="img/logo.png" alt="" class="ml-auto"></p>
+            <h1 class="sliderTitle">MacBook Pro</h1>
+            <p>More power.<br>
+              More performance.
+              <br>More pro.</p>
+          </div>
+          <div class="col-md-7"><img src="../../public/img/Slider Iamge_Apple.jpg" alt="" class="img-fluid"></div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="row">
+          <div class="col-md-7 text-center"><img src="../../public/img/Slider Iamge_Dell.jpg" alt="" class="img-fluid"></div>
+          <div class="col-md-5">
+            <h1 class="sliderTitle">Inspiron Laptops 2-in-1</h1>
+            <ul class="list-unstyled">
+              <li>Fully-featured laptops. </li>
+              <li>Wherever you go, </li>
+              <li>with a variety of sleek design options.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="row">
+          <div class="col-md-5 text-right">
+            <h1 class="sliderTitle">Windows laptops</h1>
+            <ul class="list-unstyled">
+
+              <li> Give you everything you love and more </li>
+
+              <li>and the latest processors and features.</li>
+            </ul>
+          </div>
+          <div class="col-md-7"><img src="../../public/img/Slider Iamge_Microsoft.jpg" alt="" class="img-fluid"></div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="row">
+          <div class="col-md-7"><img src="../../public/img/Slider Iamge_Lenovo.png" alt="" class="img-fluid"></div>
+          <div class="col-md-5">
+            <h1 class="sliderTitle">Lenovo Laptop</h1>
+            <ul class="list-unstyled">
+              <li>Strong Enough for Everyday</li>
+              <li>provides your students with the tools they need to succeed in today’s modern and digital world</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      </div></div></div>
+
+
+      
+    {{!-- </div>
+  </div>
+</div> --}}
+<!-- Carousel End-->

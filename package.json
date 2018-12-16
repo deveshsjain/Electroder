@@ -1,0 +1,35 @@
+{
+  "name": "cs546-final-project",
+  "version": "1.0.0",
+  "description": "Electroder-An online shopping website for laptops",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test-db": "node test-db.js",
+    "seed-db": "node seed-db.js",
+    "drop-db": "node drop-db.js"
+  },
+  "repository": {
+    "type": "git"
+  },
+  "author": "GopiMiyani 10437266, Devesh Jain 10435361, Priyanka Dassani 10426752,James Fining 10375318",
+  "license": "ISC",
+  "bugs": {},
+  "homepage": "",
+  "dependencies": {
+    "body-parser": "1.18.3",
+    "cookie-parser": "^1.4.3",
+    "dialog": "^0.3.1",
+    "express": "^4.16.4",
+    "express-handlebars": "^3.0.0",
+    "express-session": "^1.7.6",
+    "jquery": "^3.3.1",
+    "mongodb": "^3.1.10",
+    "noty": "^3.2.0-beta",
+    "password-hash": "^1.2.2",
+    "uuid": "^3.3.2"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.9"
+  }
+}
